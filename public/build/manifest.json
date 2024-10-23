@@ -1,0 +1,54 @@
+{
+  "_axios-BimPEqV4.js": {
+    "file": "assets/axios-BimPEqV4.js",
+    "name": "axios"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-BCfD8AWd.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DnAkODTe.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_axios-BimPEqV4.js"
+    ]
+  },
+  "resources/js/auction.jsx": {
+    "file": "assets/auction-BjzeE7HK.js",
+    "name": "auction",
+    "src": "resources/js/auction.jsx",
+    "isEntry": true,
+    "imports": [
+      "_axios-BimPEqV4.js"
+    ],
+    "css": [
+      "assets/auction-BsWeNkhu.css"
+    ],
+    "assets": [
+      "assets/cards-C8xcH3e9.svg",
+      "assets/credit-CvOLYsbf.svg",
+      "assets/wallet-wkCLh39-.svg",
+      "assets/shop-CElfFVNU.svg"
+    ]
+  },
+  "resources/upload/svg/cards.svg": {
+    "file": "assets/cards-C8xcH3e9.svg",
+    "src": "resources/upload/svg/cards.svg"
+  },
+  "resources/upload/svg/credit.svg": {
+    "file": "assets/credit-CvOLYsbf.svg",
+    "src": "resources/upload/svg/credit.svg"
+  },
+  "resources/upload/svg/shop.svg": {
+    "file": "assets/shop-CElfFVNU.svg",
+    "src": "resources/upload/svg/shop.svg"
+  },
+  "resources/upload/svg/wallet.svg": {
+    "file": "assets/wallet-wkCLh39-.svg",
+    "src": "resources/upload/svg/wallet.svg"
+  }
+}

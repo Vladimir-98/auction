@@ -1,0 +1,81 @@
+@import "resources/scss/variables";
+
+.header {
+    width: 100%;
+    position: relative;
+
+    .wallet {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 170px;
+        height: 15rem;
+        transition: all $trans;
+        position: relative;
+        padding: 0 $paddingMainContainer;
+
+        &__img {
+            position: absolute;
+            width: 4.4rem;
+            transition: all $trans;
+            left: 33%;
+            top: 25%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            position: absolute;
+            top: 60%;
+            right: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 29px;
+            transition: all $trans;
+        }
+
+        &__link {
+            position: absolute;
+            top: 75%;
+            right: 0;
+            width: 100%;
+            text-align: center;
+            font-size: .95em;
+            cursor: pointer;
+            transition: all $trans;
+            font-family: $font;
+            font-weight: 600;
+        }
+    }
+
+    &.active {
+
+        .wallet {
+            top: 0;
+            left: 0;
+            height: 3rem;
+            transform: translate(0, 0);
+
+            &__img {
+                top: 20%;
+                left: $paddingMainContainer;
+                width: 2rem;
+                height: 1.9rem;
+            }
+
+            &__title {
+                top: 26%;
+                font-size: 17px;
+                text-align: start;
+                left: 27%;
+            }
+
+            &__link {
+                opacity: 0;
+                z-index: -1;
+            }
+        }
+    }
+}

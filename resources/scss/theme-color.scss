@@ -1,0 +1,355 @@
+
+.form-control::placeholder {
+    color: $subtitleTextColorTheme;
+}
+
+.choice {
+    h4, .card__price-lead-sum {
+        color: $buttonTextColorTheme !important;
+    }
+
+    .card__price-lead-title, .card__description p {
+        color: $buttonTextColorTheme !important;
+        opacity: .7;
+    }
+}
+
+.checkbox {
+    input:checked + span {
+        background: $accentTextColorTheme;
+    }
+
+    span, input {
+        &::after {
+            border: solid $buttonTextColorTheme;
+        }
+    }
+}
+
+// Dark Theme
+.dark {
+
+    .skeleton {
+        p,
+        h4,
+        .card__price-lead-sum,
+        .card__price-lead-title {
+            &:after {
+                background-color: $bgColorTheme;
+            }
+
+            &:before {
+                background: linear-gradient(90deg, transparent, $bgColorTheme, transparent);
+            }
+        }
+
+    }
+
+    &.desktop {
+        .bg-color {
+            background-color: $bgColorTheme;
+        }
+
+        .card-bg-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .img-bg-color {
+            background-color: $bgColorTheme;
+        }
+
+        .border-bottom-color {
+            border-bottom: 1px solid $bgColorTheme;
+        }
+
+        .stroke-color {
+            stroke: $subtitleTextColorTheme
+        }
+
+        .subtitle-color {
+            color: $subtitleTextColorTheme;
+        }
+
+        .text-color {
+            color: $textColorTheme;
+        }
+
+        .badge-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-bg-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-text-color {
+            color: $buttonTextColorTheme;
+        }
+
+        .link-color {
+            color: $linkColorTheme;
+        }
+    }
+
+    &.ios {
+        .bg-color {
+            background-color: $bgColorTheme;
+        }
+
+        .card-bg-color {
+            background-color: $headerBgColorTheme;
+        }
+
+        .img-bg-color {
+            background-color: $bgColorTheme;
+        }
+
+        .border-bottom-color {
+            border-bottom: 1px solid $bgColorTheme;
+        }
+
+        .stroke-color {
+            stroke: $subtitleTextColorTheme
+        }
+
+        .subtitle-color {
+            color: $subtitleTextColorTheme;
+        }
+
+        .text-color {
+            color: $textColorTheme;
+        }
+
+        .badge-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-bg-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-text-color {
+            color: $buttonTextColorTheme;
+        }
+
+        .link-color {
+            color: $linkColorTheme;
+        }
+    }
+
+    &.android {
+        .bg-color {
+            background-color: $bottomBarBgColorTheme;
+        }
+
+        .card-bg-color {
+            background-color: $bgColorTheme;
+        }
+
+        .img-bg-color {
+            background-color: $bottomBarBgColorTheme;
+        }
+
+        .border-bottom-color {
+            border-bottom: 1px solid $bottomBarBgColorTheme;
+        }
+
+        .stroke-color {
+            stroke: $subtitleTextColorTheme
+        }
+
+        .subtitle-color {
+            color: $subtitleTextColorTheme;
+        }
+
+        .text-color {
+            color: $textColorTheme;
+        }
+
+        .badge-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-bg-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-text-color {
+            color: $buttonTextColorTheme;
+        }
+
+        .link-color {
+            color: $linkColorTheme;
+        }
+
+        .skeleton {
+            p,
+            h4,
+            .card__price-lead-sum,
+            .card__price-lead-title {
+                &:after {
+                    background-color: $bottomBarBgColorTheme;
+                }
+
+                &:before {
+                    background: linear-gradient(90deg, transparent, $bottomBarBgColorTheme, transparent);
+                }
+            }
+
+        }
+    }
+}
+
+//Light Theme
+.light {
+    .skeleton {
+        p, h4, .card__price-lead-sum, .card__price-lead-title {
+            &:after {
+                background-color: $secondaryBgColorTheme;
+            }
+
+            &:before {
+                background: linear-gradient(90deg, transparent, $secondaryBgColorTheme, transparent);
+            }
+        }
+    }
+
+    &.desktop {
+        .bg-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .card-bg-color {
+            background-color: $bgColorTheme;
+        }
+
+        .img-bg-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .border-bottom-color {
+            border-bottom: 1px solid $secondaryBgColorTheme;
+        }
+
+        .stroke-color {
+            stroke: $subtitleTextColorTheme
+        }
+
+        .subtitle-color {
+            color: $subtitleTextColorTheme;
+        }
+
+        .text-color {
+            color: $textColorTheme;
+        }
+
+        .badge-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .button-bg-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-text-color {
+            color: $buttonTextColorTheme;
+        }
+
+        .link-color {
+            color: $linkColorTheme;
+        }
+    }
+
+    &.ios {
+        .bg-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .card-bg-color {
+            background-color: $bgColorTheme;
+        }
+
+        .img-bg-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .border-bottom-color {
+            border-bottom: 1px solid $secondaryBgColorTheme;
+        }
+
+        .stroke-color {
+            stroke: $subtitleTextColorTheme
+        }
+
+        .subtitle-color {
+            color: $subtitleTextColorTheme;
+        }
+
+        .text-color {
+            color: $textColorTheme;
+        }
+
+        .badge-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .button-bg-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-text-color {
+            color: $buttonTextColorTheme;
+        }
+
+        .link-color {
+            color: $linkColorTheme;
+        }
+
+    }
+
+    &.android {
+        .bg-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .card-bg-color {
+            background-color: $bgColorTheme;
+        }
+
+        .img-bg-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .border-bottom-color {
+            border-bottom: 1px solid $secondaryBgColorTheme;
+        }
+
+        .stroke-color {
+            stroke: $subtitleTextColorTheme
+        }
+
+        .subtitle-color {
+            color: $subtitleTextColorTheme;
+        }
+
+        .text-color {
+            color: $textColorTheme;
+        }
+
+        .badge-color {
+            background-color: $secondaryBgColorTheme;
+        }
+
+        .button-bg-color {
+            background-color: $buttonColorTheme;
+        }
+
+        .button-text-color {
+            color: $buttonTextColorTheme;
+        }
+
+        .link-color {
+            color: $linkColorTheme;
+        }
+    }
+}

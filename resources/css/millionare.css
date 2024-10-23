@@ -1,0 +1,507 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.millionare {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: url(../../upload/millionare/cover.jpg) no-repeat center / cover;
+    min-height: 100%;
+    gap: 25px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.millionare__content {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+.millioner__question-box {
+    display: grid;
+    gap: 25px;
+    margin: auto;
+    min-height: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.millioner__question-area {
+    position: relative;
+}
+
+.millioner__question {
+    background: url(../../upload/millionare/svg/default.svg) no-repeat center/cover;
+    position: relative;
+    z-index: 1;
+    height: 75px;
+    margin: auto;
+}
+
+.answer.default {
+    background: url(../../upload/millionare/svg/default.svg) no-repeat center / cover;
+}
+.answer.choice {
+    background: url(../../upload/millionare/svg/default_choice.svg) no-repeat center/cover;
+}
+.answer.success {
+    background: url(../../upload/millionare/svg/default_success.svg) no-repeat center/cover;
+}
+.answer.error {
+    background: url(../../upload/millionare/svg/default_error.svg) no-repeat center/cover;
+}
+
+.answer.default:hover {
+    background: url(../../upload/millionare/svg/default_small-hover.svg) no-repeat center/cover;
+}
+
+.millioner__answer-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 25px;
+    position: relative;
+    align-items: center;
+}
+
+.millioner__answer-area {
+    position: relative;
+    width: 50%;
+}
+
+.millioner__question-area:after,
+.millioner__answer-area:after {
+    content: "";
+    width: 100%;
+    background: #9e9e9e;
+    position: absolute;
+    z-index: 0;
+}
+
+.millioner__question-area:after {
+    width: 200%;
+    height: 5px;
+    top: 36px;
+    left: -50%;
+}
+
+.millioner__answer-area:after {
+    width: 300%;
+    height: 4px;
+    top: 24px;
+    left: -100%;
+}
+
+.answer {
+    height: 50px;
+    /*width: 100%;*/
+    position: relative;
+    z-index: 1;
+}
+
+.answer label {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    color: white;
+    font-size: 15px;
+    line-height: 15px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 0 40px;
+}
+
+.answer-label .img{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -15px;
+    background: #ff6600;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-label .img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.answer-label .img:first-of-type{
+    right: 60px;
+}
+.answer-label .img:last-of-type{
+    right: 30px;
+}
+
+.answer-label span{
+    font-size: 23px;
+    color: #ffa200;
+    font-weight: bold;
+    width: 10%;
+}
+
+.answer-label p{
+    margin: 0;
+    width: 100%;
+    white-space: pre-wrap;
+    padding-right: 10px;
+}
+
+.answer-label.min p{
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.answer input {
+    display: none;
+}
+
+.question {
+    padding: 0 35px;
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.millionare__hints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.td_millionare {
+    font-size: 14px;
+    color: white;
+    padding-left: 5px;
+}
+
+.round-style, .round-time {
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.round-style {
+    background: url(../../upload/millionare/svg/button.svg) no-repeat center/cover;
+    width: 45px;
+    height: 29px;
+}
+
+.round-time, .roundEnd {
+    background: url(../../upload/millionare/svg/button_success.svg) no-repeat center/cover;
+    width: 53px;
+    height: 33px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.round-time.time-end{
+    background: url(../../upload/millionare/svg/button_active.svg) no-repeat center/cover!important;
+}
+
+.roundEnd {
+    margin-top: 25px;
+}
+
+.round-style:hover {
+    background: url(../../upload/millionare/svg/button_hover.svg) no-repeat center/cover;
+}
+
+
+.round-style.active, .round-style.active:hover {
+    background: url(../../upload/millionare/svg/button_active.svg) no-repeat center/cover;
+}
+
+.round-style img {
+    height: 70%;
+}
+
+.round-style p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.millionare__sum {
+    width: 170px;
+}
+
+.table_millionare {
+    width: 100%;
+}
+
+.btn_millionare {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 5%
+}
+
+.tr_millionare .td_millionare {
+    color: #ffa200;
+    font-weight: bold
+}
+
+.end, .reStart, .start {
+    background: url("../../upload/millionare/cover-dark.jpg") no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    font-weight: bold;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start {
+    display: block;
+}
+
+#user {
+    margin-left: 39%;
+    margin-top: 20%;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px
+}
+
+#start {
+    height: 56px;
+    text-align: center;
+    font-size: 20px
+}
+
+.end h1 {
+    color: #f30!important;
+    text-align: center;
+}
+
+.end h3 {
+    color: #cc0;
+    text-align: center;
+}
+
+.reStart h1 {
+    text-align: center;
+    color: white !important;
+}
+
+.millionare .btn_blue {
+    margin: 0 !important;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .millioner__question-box{
+        width: 545px;
+    }
+    .millioner__question {
+        height: 55px;
+    }
+
+    .answer {
+        height: 37px;
+    }
+
+    .answer label {
+        font-size: 12px;
+        line-height: 12px;
+        padding: 0 30px;
+    }
+
+    .answer-label span{
+        font-size: 18px;
+    }
+
+    .question {
+        padding: 0 23px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .millioner__question-area:after {
+        height: 4px;
+        top: 27px;
+    }
+
+    .millioner__answer-area:after {
+        height: 3px;
+        top: 17px;
+    }
+
+    .answer-label .img {
+        width: 22px;
+        height: 22px;
+        padding: 5px;
+        top: -10px;
+    }
+    .answer-label .img:first-of-type{
+        right: 50px;
+    }
+    .answer-label .img:last-of-type{
+        right: 25px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    /*.millionare {*/
+    /*    min-height: 440px;*/
+    /*}*/
+
+    .millioner__answer-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        row-gap: 25px;
+        position: relative;
+        align-items: center;
+    }
+
+    .millioner__answer-area {
+        position: relative;
+        height: 36px;
+        width: 360px;
+    }
+
+    .answer label{
+        width: 340px;
+    }
+
+    .millioner__answer-box {
+        row-gap: 10px !important;
+    }
+
+    .millioner__question-area {
+        position: relative;
+        height: 47px;
+    }
+
+    .millioner__question {
+        height: 39px;
+        width: 390px;
+    }
+
+    .millioner__question-box {
+        width: 100%;
+        min-height: 199px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .question {
+        padding: 0 19px;
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .millioner__question-area:after {
+        height: 3px;
+        top: 18px;
+    }
+
+    .answer label {
+        font-size: 9px;
+        line-height: 8px;
+        padding: 0 12px;
+    }
+
+    .answer-label span{
+        font-size: 15px;
+    }
+
+    .td_millionare {
+        font-size: 10px;
+        padding-left: 0;
+    }
+
+    .millionare__sum {
+        width: 95px;
+    }
+
+    /*.round-style {*/
+    /*    width: 45px;*/
+    /*    height: 32px;*/
+    /*}*/
+
+    .millionare__hints {
+        gap: 10px;
+    }
+
+    /*.round-style p {*/
+    /*    font-size: 10px;*/
+    /*}*/
+
+    .roundEnd {
+        margin-top: 10px;
+    }
+
+    /*.round-time, .roundEnd {*/
+    /*    width: 60px;*/
+    /*    height: 42px;*/
+    /*    font-size: 25px;*/
+    /*}*/
+
+    .btn_millionare {
+        height: 30px;
+        font-size: 13px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .answer-label .img {
+        width: 15px;
+        height: 15px;
+        padding: 4px;
+        top: 0;
+    }
+
+    .answer-label .img:first-of-type{
+        right: 27px;
+    }
+    .answer-label .img:last-of-type{
+        right: 10px;
+    }
+}

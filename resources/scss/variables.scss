@@ -1,0 +1,31 @@
+$font: "Roboto", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Inter, Avenir, Helvetica, Arial, sans-serif;
+
+$op_09: 0.9;
+
+$trans: 0.3s ease;
+$transIn: 0.3s ease-in;
+$transInOut: 0.3s ease-in-out;
+$listRadius: .9rem;
+$listRadiusM: .45rem;
+$paddingContainer: .5rem;
+$paddingMainContainer: 1rem;
+
+//TG color
+$buttonTextColorTheme: var(--tg-theme-button-text-color, #ffffff);
+$textColorTheme: var(--tg-theme-text-color, #000000);
+$hintColorTheme: var(--tg-theme-hint-color, #707579);
+$subtitleTextColorTheme: var(--tg-theme-subtitle-text-color, #707579);
+$secondaryBgColorTheme: var(--tg-theme-secondary-bg-color, #f4f4f5);
+$bgColorTheme: var(--tg-theme-bg-color, #ffffff);
+$headerBgColorTheme: var(--tg-theme-header-bg-color, #ffffff);
+$bottomBarBgColorTheme: var(--tg-theme-bottom-bar-bg-color, #ffffff);
+$sectionBgColorTheme: var(--tg-theme-section-bg-color, #ffffff);
+$sectionSeparatorColorTheme: var(--tg-theme-section-separator-color);
+$linkColorTheme: var(--tg-theme-link-color, #3390ec);
+$accentTextColorTheme: var(--tg-theme-accent-text-color, #3390ec);
+$sectionHeaderTextColorTheme: var(--tg-theme-section-header-text-color, #3390ec);
+$buttonColorTheme: var(--tg-theme-button-color, #3390ec);
+$destructiveTextColorTheme: var(--tg-theme-destructive-text-color, #e53935);
+
+$skeleton: var(--skeleton-gradient-from-color, rgba(0, 0, 0, 0.06));
+$dropBgColorTheme: rgb(164 164 164 / 12%);

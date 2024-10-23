@@ -1,0 +1,118 @@
+@import "resources/scss/variables";
+
+.list {
+    border-radius: $listRadius;
+    outline: none;
+    margin-bottom: $paddingMainContainer;
+
+    &:focus {
+        border-radius: 10px
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 0 $paddingContainer;
+
+        &:last-child > &-right {
+            border-bottom: transparent;
+        }
+
+        &-left {
+            padding: $paddingContainer 0;
+        }
+
+        &-right {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3.1rem;
+            padding: $paddingContainer;
+        }
+
+        &-img {
+            width: 3.1rem;
+            height: 3.1rem;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-title {
+            font-size: 1.1em;
+            font-weight: 400;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            align-self: center;
+        }
+
+        &-subtitle {
+            font-size: .9em;
+            font-weight: 400;
+        }
+
+        &-dropdown {
+            max-height: 0;
+            transition: max-height $trans;
+            border-radius: .2rem;
+            overflow: scroll;
+            padding: 0 $paddingContainer;
+
+            &-list {
+                display: grid;
+                gap: $paddingContainer;
+                padding: $paddingContainer $paddingMainContainer;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &.active {
+                max-height: 11rem;
+            }
+        }
+
+        &-arrow {
+            width: .8rem;
+            height: .8rem;
+
+            svg {
+                transition: transform $trans;
+                width: 100%;
+                height: 100%;
+                stroke-linecap: round;
+                stroke-width: 4.48px;
+                fill: none;
+            }
+
+            &.active {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    &.small {
+        .list {
+            &__item {
+
+                &-img {
+                    width: 1.7rem;
+                    height: 1.7rem;
+                    border-radius: .45rem;
+                }
+
+                &-right {
+                    height: 2rem;
+                }
+            }
+        }
+    }
+}

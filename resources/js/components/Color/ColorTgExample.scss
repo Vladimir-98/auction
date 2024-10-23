@@ -1,0 +1,73 @@
+@import "resources/scss/variables";
+
+.colorBox {
+    position: fixed;
+    width: 60px;
+    z-index: 1;
+
+    div {
+        width: 40px;
+        height: 20px;
+    }
+
+    .button_text_color {
+        background-color: $buttonTextColorTheme;
+    }
+
+    .text_color {
+        background-color: $textColorTheme;
+    }
+
+    .hint_color {
+        background-color: $hintColorTheme;
+    }
+
+    .subtitle_text_color {
+        background-color: $subtitleTextColorTheme;
+    }
+
+    .secondary_bg_color {
+        background-color: $secondaryBgColorTheme;
+    }
+
+    .bg_color {
+        background-color: $bgColorTheme;
+    }
+
+    .header_bg_color {
+        background-color: $headerBgColorTheme;
+    }
+
+    .bottom_bar_bg_color {
+        background-color: $bottomBarBgColorTheme;
+    }
+
+    .section_bg_color {
+        background-color: $sectionBgColorTheme;
+    }
+
+    .section_separator_color {
+        background-color: $sectionSeparatorColorTheme;
+    }
+
+    .link_color {
+        background-color: $linkColorTheme;
+    }
+
+    .accent_text_color {
+        background-color: $accentTextColorTheme;
+    }
+
+    .section_header_text_color {
+        background-color: $sectionHeaderTextColorTheme;
+    }
+
+    .button_color {
+        background-color: $buttonColorTheme;
+    }
+
+    .destructive_text_color {
+        background-color: $destructiveTextColorTheme;
+    }
+
+}

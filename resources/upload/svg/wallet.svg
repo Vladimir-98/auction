@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" fill="none" version="1.1" viewBox="0 -3 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <rect transform="matrix(.96335 -.26824 .31224 .95 0 0)" x=".73527" y="5.0048" width="21.293" height="13.632" rx=".8" ry=".8" fill="#2ca02c" fill-rule="evenodd" stop-color="#000000" stroke-opacity="0" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+ <rect transform="rotate(-7.4723)" x="3.9935" y="3.5973" width="22.472" height="15.079" rx=".8" ry=".8" fill="#5fd35f" fill-rule="evenodd" stop-color="#000000" stroke-opacity="0" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+ <defs>
+  <linearGradient id="linearGradient3600" x1="26.951" x2="4.9002" y1="20.684" y2="6.8005" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ff4900" offset="0"/>
+   <stop stop-color="#ffa600" stop-opacity=".99216" offset="1"/>
+  </linearGradient>
+  <linearGradient id="linearGradient8661" x1="30.738" x2="25.615" y1="17.343" y2="11.329" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ff9c2a" offset="0"/>
+   <stop stop-color="#ffd42a" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g fill-rule="evenodd">
+  <rect x=".73351" y="3.0133" width="30.45" height="21.945" rx="4.8" ry="4.8" fill="url(#linearGradient3600)" stop-color="#000000" stroke-opacity="0" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+  <path d="m27.216 18.155c-2.3149 0-4.1915-1.8765-4.1915-4.1913s1.8766-4.1913 4.1915-4.1913c1.0014 0 1.9167-0.00164 3.6035-0.00215 0.76871-2.343e-4 1.1452 0.54308 1.144 1.1169l-0.01349 6.3016c0 0.67568-0.54017 0.97974-1.1716 0.97974-1.7267-0.0049-2.7427-0.01339-3.5624-0.01339z" fill="url(#linearGradient8661)" stroke-width=".04"/>
+  <circle cx="26.84" cy="14.044" r="1.6275" fill="#ff4700" stroke-width=".04"/>
+ </g>
+</svg>

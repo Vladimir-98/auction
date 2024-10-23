@@ -1,0 +1,965 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Telegram Auction API",
+        "description": "API для работы с Telegram мини-приложениями",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/telegram/buy-orders": {
+            "post": {
+                "tags": [
+                    "Mini Apps"
+                ],
+                "summary": "Оплата карточек",
+                "operationId": "ef9624c8723308f12a1beb0c32d6a6e7",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/X-Init-Data"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешная оплата карточек",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "balance": {
+                                                    "type": "number",
+                                                    "example": 10000
+                                                },
+                                                "orders": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "integer"
+                                                    },
+                                                    "example": [
+                                                        45,
+                                                        233
+                                                    ]
+                                                },
+                                                "filter": {
+                                                    "$ref": "#/components/schemas/FilterItems"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Успех"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Ошибка оплаты карточек",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "It's not a telegram || Данные отсутствуют! || Клиент не найден!"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/card": {
+            "post": {
+                "tags": [
+                    "Card"
+                ],
+                "description": "Обновление || Создание карточки",
+                "operationId": "b7a04611b4d1fc1d1c618e2c63830cc6",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "crm_id": {
+                                        "type": "integer",
+                                        "example": 12345
+                                    },
+                                    "crm_url": {
+                                        "type": "string",
+                                        "example": "crm.com"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "example": "John Doe"
+                                    },
+                                    "desc": {
+                                        "type": "string",
+                                        "example": "Описание проекта"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "+71234567890"
+                                    },
+                                    "budget_min": {
+                                        "type": "integer",
+                                        "example": 1000
+                                    },
+                                    "budget_max": {
+                                        "type": "integer",
+                                        "example": 5000
+                                    },
+                                    "lead_price": {
+                                        "type": "integer",
+                                        "example": 2000
+                                    },
+                                    "card_status": {
+                                        "type": "string",
+                                        "example": "Ожидает"
+                                    },
+                                    "cities": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "example": [
+                                            "Москва"
+                                        ]
+                                    },
+                                    "districts": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "maxLength": 100
+                                        },
+                                        "example": [
+                                            "district1",
+                                            "district2"
+                                        ]
+                                    },
+                                    "types": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "maxLength": 100
+                                        },
+                                        "example": [
+                                            "type1",
+                                            "type2"
+                                        ]
+                                    },
+                                    "paymentTypes": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "maxLength": 100
+                                        },
+                                        "example": [
+                                            "credit",
+                                            "debit"
+                                        ]
+                                    },
+                                    "callRecords": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "maxLength": 255
+                                        },
+                                        "example": [
+                                            "record1",
+                                            "record2"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ на запрос",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Карточка обновлена!"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "crm_id": {
+                                                    "type": "integer",
+                                                    "example": 1231
+                                                },
+                                                "crm_url": {
+                                                    "type": "string",
+                                                    "example": "crm.com"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Доступ запрещён",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Access denied"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Ошибка валидации",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Поле 'name' обязательно для заполнения."
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": {
+                                                "name": [
+                                                    "Поле 'name' обязательно для заполнения."
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/auction": {
+            "post": {
+                "tags": [
+                    "Telegram Bot"
+                ],
+                "summary": "Команда /auction",
+                "description": "Вывод кнопки для запуска mini apps",
+                "operationId": "dbd414c281886e1e14240ef3915a6adf",
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ на команду /auction",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "chat_id": {
+                                            "type": "number",
+                                            "example": 5334422
+                                        },
+                                        "text": {
+                                            "type": "string",
+                                            "example": "Открыть каталог в приложении"
+                                        },
+                                        "parse_mode": {
+                                            "type": "string",
+                                            "example": "html"
+                                        },
+                                        "inline_keyboard": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "array",
+                                                "items": {
+                                                    "properties": {
+                                                        "text": {
+                                                            "type": "string",
+                                                            "example": "Вперед"
+                                                        },
+                                                        "web_app": {
+                                                            "properties": {
+                                                                "url": {
+                                                                    "type": "string",
+                                                                    "example": "/telegram/auction"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/start": {
+            "post": {
+                "tags": [
+                    "Telegram Bot"
+                ],
+                "summary": "Команда /start",
+                "operationId": "735227e652575f8cecb988de017921c6",
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ на команду /start",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "chat_id": {
+                                            "type": "number",
+                                            "example": 5334422
+                                        },
+                                        "text": {
+                                            "type": "string",
+                                            "example": "🌟 Привет, мы рады видеть тебя в гостях! 🌟 🎉 Чтобы начать, просто нажми на кнопку: 👉 /auction 💳 Тест карта (max 1000): 1111 1111 1111 1026, 12/22, 000 💬 Если у тебя возникнут вопросы, не стесняйся обращаться!"
+                                        },
+                                        "parse_mode": {
+                                            "type": "string",
+                                            "example": "html"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/telegram/orders": {
+            "post": {
+                "tags": [
+                    "Mini Apps"
+                ],
+                "summary": "Получение карточек",
+                "operationId": "b05461b36571726e44215bed4c041b05",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/X-Init-Data"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "page": {
+                                        "type": "integer",
+                                        "example": 2
+                                    },
+                                    "filter": {
+                                        "properties": {
+                                            "categories": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "integer"
+                                                },
+                                                "example": [
+                                                    1,
+                                                    3
+                                                ]
+                                            },
+                                            "districts": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "integer"
+                                                },
+                                                "example": [
+                                                    2,
+                                                    6
+                                                ]
+                                            },
+                                            "paymentType": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "integer"
+                                                },
+                                                "example": [
+                                                    3,
+                                                    8
+                                                ]
+                                            },
+                                            "leadPrice": {
+                                                "properties": {
+                                                    "min": {
+                                                        "type": "integer",
+                                                        "example": 1000
+                                                    },
+                                                    "max": {
+                                                        "type": "integer",
+                                                        "example": 2000
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "budget": {
+                                                "properties": {
+                                                    "min": {
+                                                        "type": "integer",
+                                                        "example": 1000000
+                                                    },
+                                                    "max": {
+                                                        "type": "integer",
+                                                        "example": 4000000
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Получение карточек",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "orders": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "oneOf": [
+                                                            {
+                                                                "$ref": "#/components/schemas/Order"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                "page": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "hasMore": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Успех"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Ошибка получение карточек",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "It's not a telegram || Не удалось получить карточки"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/telegram/validation": {
+            "post": {
+                "tags": [
+                    "Mini Apps"
+                ],
+                "summary": "Инициализация клиента Telegram",
+                "operationId": "f32289e0aa674592fb2c72f2b5cefb1d",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/X-Init-Data"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешная инициализация клиента",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "balance": {
+                                                    "type": "number",
+                                                    "example": 10000
+                                                },
+                                                "filter": {
+                                                    "$ref": "#/components/schemas/FilterItems"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Успех"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Ошибка инициализации клиента",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "It's not a telegram"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/telegram/create-link-invoice": {
+            "post": {
+                "tags": [
+                    "Mini Apps"
+                ],
+                "summary": "Получение ссылки на оплату",
+                "operationId": "d35300d4ea13ad66f759fcc3c18484a6",
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/X-Init-Data"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Успешное получение ссылки на оплату",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "invoiceLink": {
+                                                    "type": "string",
+                                                    "example": "https://t.me/$kmtBZ9v2ADGSsCQAA_qReE3KW3KU"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": true
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Успех"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Ошибка получения ссылки на оплату",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "example": false
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "example": "It's not a telegram || Не удалось создать ссылку"
+                                        },
+                                        "errors": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            },
+                                            "example": []
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Category": {
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Новостройки"
+                    },
+                    "img": {
+                        "type": "string",
+                        "example": "/upload/svg/novostroyki.svg"
+                    },
+                    "total": {
+                        "type": "integer",
+                        "example": 20
+                    },
+                    "active": {
+                        "type": "boolean",
+                        "example": false
+                    }
+                },
+                "type": "object"
+            },
+            "FilterItems": {
+                "type": "array",
+                "items": {
+                    "oneOf": [
+                        {
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "example": 1
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "example": "categories"
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "example": "Категории"
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "example": "checkBox"
+                                },
+                                "dropDown": {
+                                    "type": "boolean",
+                                    "example": true
+                                },
+                                "active": {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "items": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Category"
+                                    }
+                                }
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "properties": {
+                                "id": {
+                                    "type": "integer",
+                                    "example": 2
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "example": "budget"
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "example": "Бюджет"
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "example": "rangeInput"
+                                },
+                                "dropDown": {
+                                    "type": "boolean",
+                                    "example": true
+                                },
+                                "active": {
+                                    "type": "boolean",
+                                    "example": false
+                                },
+                                "items": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "min": {
+                                                "type": "integer",
+                                                "example": null,
+                                                "nullable": true
+                                            },
+                                            "max": {
+                                                "type": "integer",
+                                                "example": null,
+                                                "nullable": true
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            },
+                            "type": "object"
+                        }
+                    ]
+                }
+            },
+            "Order": {
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "1-ком. квартира"
+                    },
+                    "budget": {
+                        "type": "string",
+                        "example": "12 000 000 - 15 000 000"
+                    },
+                    "leadPrice": {
+                        "type": "integer",
+                        "example": 2000
+                    },
+                    "paymentType": {
+                        "type": "string",
+                        "example": "Ипотека, Наличные"
+                    },
+                    "districts": {
+                        "type": "string",
+                        "example": "Российский, Центральный"
+                    },
+                    "categories": {
+                        "type": "boolean",
+                        "example": "Новостройка"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "parameters": {
+            "X-Init-Data": {
+                "name": "X-Init-Data",
+                "in": "header",
+                "description": "Telegram.WebApp.initData",
+                "required": true,
+                "schema": {
+                    "type": "string"
+                }
+            }
+        },
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Card"
+        },
+        {
+            "name": "Mini Apps"
+        },
+        {
+            "name": "Telegram Bot",
+            "description": "Команды Telegram бота"
+        }
+    ]
+}

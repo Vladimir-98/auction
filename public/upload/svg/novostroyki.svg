@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter18301" x="-7.2558e-5" y="-8.166e-5" width="1.0001" height="1.0002" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.00062367689"/>
+  </filter>
+ </defs>
+ <path transform="matrix(.52372 -.70768 1.1356 .92998 -13.799 9.2787)" d="m8.8311 12.306 14.108 0.22857-2.9193 18.101-17.71-0.28694 2.9193-16.348c0.50478 0.07991 3.1274-0.28924 3.6023-1.6951z" display="none" fill="#808080" fill-opacity=".2" fill-rule="evenodd" filter="url(#filter18301)" stop-color="#000000" stroke-opacity="0" style="paint-order:stroke fill markers"/>
+ <g transform="rotate(-42.492)">
+  <path d="m-5.2148 11.877v24.967h11.219v-24.967zm0.019531 0.01953h11.182v24.928h-11.182z" color="#000000" fill-opacity="0" style="-inkscape-stroke:none;paint-order:stroke fill markers"/>
+ </g>
+ <g transform="matrix(.26277 0 0 .27947 6.9487 6.5203)" fill-rule="evenodd">
+  <g transform="matrix(1,0,0,1.1445,0,-2.183)" stroke-width="3.4493">
+   <rect x="20.937" y="15.103" width="19.402" height="24.656" fill="#808080" stop-color="#000000" stroke="#22273d" stroke-width=".063743" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+   <path d="m23.107 33.881h4.2829v3.0018h-4.2829zm-0.0073-4.1117h4.2829v3.0018h-4.2829zm-0.04236-4.006h4.2829v3.0018h-4.2829zm10.154-3.9583h4.2829v3.0018h-4.2829zm-5.0856 0.03298h4.2829v3.0018h-4.2829zm-5.066-0.03298h4.2829v3.0018h-4.2829zm10.149-4.0908h4.2829v3.0018h-4.2829zm-5.0856 0.03298h4.2829v3.0018h-4.2829zm-5.066-0.03298h4.2829v3.0018h-4.2829z" fill="#ffe680" stop-color="#000000" stroke-opacity="0" style="paint-order:stroke fill markers"/>
+  </g>
+  <g stroke-width="3.6902">
+   <rect x="30.503" y="26.54" width="16.729" height="16.637" fill="#666" stop-color="#000000" stroke="#22273d" stroke-width=".068195" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+   <path d="m31.952 37.904h3.6834v3.6181h-3.6834zm10.115 0.0015h3.6834v3.6181h-3.6834zm-5.0359 0.02784h3.6834v3.6181h-3.6834zm-5.0795-4.9435h3.6834v3.6181h-3.6834zm10.115 0.0015h3.6834v3.6181h-3.6834zm-5.0359 0.02784h3.6834v3.6181h-3.6834zm-5.0334-4.8731h3.6834v3.6181h-3.6834zm10.115 0.0015h3.6834v3.6181h-3.6834zm-5.0359 0.02784h3.6834v3.6181h-3.6834z" fill="#ffe680" stop-color="#000000" stroke-opacity="0" style="paint-order:stroke fill markers"/>
+  </g>
+  <g transform="matrix(1 0 0 1.0771 0 .49807)" stroke-width="3.5556">
+   <rect x="3.8979" y="-6.4594" width="17.039" height="46.218" fill="#6c5353" stop-color="#000000" stroke="#22273d" stroke-width=".065708" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+   <path d="m15.477 26.346h3.1025v2.7842h-3.1025zm-4.6184 0h3.1025v2.7842h-3.1025zm4.6184-4.2582h3.1025v2.7842h-3.1025zm-4.6184 0h3.1025v2.7842h-3.1025zm4.6184-4.1477h3.1025v2.7842h-3.1025zm-4.6184 0h3.1025v2.7842h-3.1025zm4.6184-4.2582h3.1025v2.7842h-3.1025zm-4.6184 0h3.1025v2.7842h-3.1025zm4.6184-4.1871h3.1025v2.7842h-3.1025zm-4.6184 0h3.1025v2.7842h-3.1025zm4.6184-4.2582h3.1025v2.7842h-3.1025zm-4.6184 0h3.1025v2.7842h-3.1025zm4.6184-4.1477h3.1025v2.7842h-3.1025zm-4.6184 0h3.1025v2.7842h-3.1025zm-4.6961 0h3.1025v2.7842h-3.1025zm9.3145-4.2582h3.1025v2.7842h-3.1025zm-4.6184 0h3.1025v2.7842h-3.1025zm-4.6961 0h3.1025v2.7842h-3.1025z" fill="#ffe680" stop-color="#000000" stroke-opacity="0" style="paint-order:stroke fill markers"/>
+  </g>
+  <g transform="matrix(1 0 0 1.1026 0 -.64019)" stroke-width="3.5142">
+   <rect x="-8.1856" y="6.2367" width="17.039" height="33.633" fill="#917c6f" stop-color="#000000" stroke="#22273d" stroke-width=".064943" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+   <path d="m3.7399 26.014h3.2854v4.1206h-3.2854zm-4.9649 0h3.2854v4.1206h-3.2854zm-5.0673 0h3.2854v4.1206h-3.2854zm9.9977 5.7092h3.2854v4.1206h-3.2854zm-4.9649 0h3.2854v4.1206h-3.2854zm-5.0673 0h3.2854v4.1206h-3.2854zm10.076-11.301h3.2854v4.1206h-3.2854zm-4.9649 0h3.2854v4.1206h-3.2854zm-5.0673 0h3.2854v4.1206h-3.2854zm10.03-5.6432h3.2854v4.1206h-3.2854zm-4.9649 0h3.2854v4.1206h-3.2854zm-5.0673 0h3.2854v4.1206h-3.2854zm10.042-5.5914h3.2854v4.1206h-3.2854zm-4.9649 0h3.2854v4.1206h-3.2854zm-5.0673 0h3.2854v4.1206h-3.2854z" fill="#ffe680" stop-color="#000000" stroke-opacity="0" style="paint-order:stroke fill markers"/>
+  </g>
+ </g>
+</svg>

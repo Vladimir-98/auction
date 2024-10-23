@@ -1,0 +1,142 @@
+@import "resources/scss/variables";
+@import "resources/scss/theme-color";
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+
+* {
+    scrollbar-width: none;
+    scrollbar-color: rgba(90, 90, 90, 0.3) transparent;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    padding-bottom: 2rem;
+}
+
+.body {
+    flex: 1 1 auto;
+    position: relative;
+    padding: 0 $paddingMainContainer;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+h3 {
+    margin: 0;
+    font-family: $font;
+    font-weight: 500;
+}
+
+// Form
+.form-group {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: $paddingMainContainer;
+    flex: 1;
+    min-height: 2.3rem;
+}
+
+.form-control {
+    min-width: 3rem;
+    width: 100%;
+    border-radius: .3rem;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    font-family: $font;
+    font-size: 1em;
+    padding: 0 $paddingContainer;
+    flex-grow: 2;
+}
+
+.form-label {
+    font-size: 1em;
+    line-height: 1.7rem;
+    font-weight: 400;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    align-self: center;
+    height: 100%;
+}
+
+.checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    min-height: 2.1rem;
+
+    span, input {
+        height: 1.3rem;
+        width: 1.3rem;
+        border-radius: 50%;
+        transition: background .1s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            width: .2rem;
+            height: .65rem;
+            left: .5rem;
+            top: .19rem;
+            border-width: 0 .17rem .17rem 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    span {
+        position: relative;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        right: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    input:checked + span::after {
+        display: block;
+    }
+
+    &-label {
+        font-size: 1.1em;
+        flex: 1;
+    }
+}
+
+.range-input{
+    &__label{
+        align-self: center;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
